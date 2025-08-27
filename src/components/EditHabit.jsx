@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  TextField,
-} from '@mui/material';
+import {  Dialog,  DialogActions,  DialogContent,  DialogTitle,  TextField,  Button,} from '@mui/material';
 
-const EditHabit = ({ open, handleClose, handleUpdateHabit, habit }) => {
+const EditHabit = ({ open, handleClose, handleUpdateHabit, habit, handleDeleteHabit }) => {
   const [name, setName] = useState('');
   const [type, setType] = useState('');
   const [notes, setNotes] = useState('');
@@ -31,6 +24,11 @@ const EditHabit = ({ open, handleClose, handleUpdateHabit, habit }) => {
     handleUpdateHabit(updatedHabit);
     handleClose();
   };
+
+  const handleDelete = () => {
+    handleDeleteHabit(habit.id);
+    handleClose();
+  }
 
   return (
     <Dialog open={open} onClose={handleClose}>
@@ -64,6 +62,7 @@ const EditHabit = ({ open, handleClose, handleUpdateHabit, habit }) => {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose}>Cancel</Button>
+        <Button onClick={handleDelete} color="error">Delete</Button>
         <Button onClick={handleSubmit}>Save</Button>
       </DialogActions>
     </Dialog>

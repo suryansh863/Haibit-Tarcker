@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { TableCell, TableRow, Button, Chip, IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 
-const HabitRow = ({ habit, handleBreakStreak, handleDeleteHabit, handleOpenEdit }) => {
+const HabitRow = ({ habit, handleBreakStreak, handleOpenEdit }) => {
   const [streak, setStreak] = useState(0);
 
   useEffect(() => {
@@ -37,9 +36,6 @@ const HabitRow = ({ habit, handleBreakStreak, handleDeleteHabit, handleOpenEdit 
         </Button>
         <IconButton onClick={() => handleOpenEdit(habit)} aria-label="edit">
             <EditIcon />
-        </IconButton>
-        <IconButton onClick={() => handleDeleteHabit(habit.id)} aria-label="delete">
-            <DeleteIcon />
         </IconButton>
       </TableCell>
     </TableRow>

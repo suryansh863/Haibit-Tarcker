@@ -80,7 +80,7 @@ const HabitTracker = () => {
   };
 
   return (
-    <div style={{ padding: '2rem', backdropFilter: 'blur(10px)' }}>
+    <div style={{ padding: '2rem', backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '15px' }}>
       <Typography variant="h4" component="h1" gutterBottom style={{ color: 'white', textAlign: 'center', marginBottom: '2rem' }}>
         Bad Habits Tracker
       </Typography>
@@ -100,6 +100,7 @@ const HabitTracker = () => {
           open={editHabitOpen}
           handleClose={() => setEditHabitOpen(false)}
           handleUpdateHabit={handleUpdateHabit}
+          handleDeleteHabit={handleDeleteHabit}
           habit={habitToEdit}
         />
       )}
