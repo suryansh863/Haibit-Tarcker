@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orange background circle -->
+  <circle cx="24" cy="24" r="24" fill="#FF6B35"/>
+  
+  <!-- White capital H -->
+  <path d="M14 12V36H18V26H30V36H34V12H30V22H18V12H14Z" fill="white"/>
+  
+  <!-- Optional: Add a subtle inner glow -->
+  <circle cx="24" cy="24" r="20" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+</svg>
